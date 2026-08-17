@@ -1,22 +1,24 @@
 # -*- coding: utf-8 -*-
-
 {
-    'name': 'Maintenance - HR',
-    'version': '1.0',
-    'sequence': 125,
-    'category': 'Human Resources',
+    'name': 'HR Multi Contract Payroll',
+    'version': '19.0.1.0.0',
+    'category': 'Human Resources/Payroll',
+    'summary': 'Allow multiple active contracts for payroll calculation',
     'description': """
-Bridge between HR and Maintenance.""",
-    'depends': ['hr', 'maintenance'],
-    'summary': 'Equipment, Assets, Internal Hardware, Allocation Tracking',
+        This module overrides default Odoo constraints to allow multiple active contracts per employee
+        and calculates payroll accordingly.
+    """,
+    'author': 'Abdulrahman',
+    'depends': [
+        'hr',
+        'hr_contract',
+        'hr_payroll',
+    ],
     'data': [
-        'security/equipment.xml',
-        'views/maintenance_views.xml',
-        'views/hr_views.xml',
-        'wizard/hr_departure_wizard_views.xml',
+
     ],
     'installable': True,
-    'auto_install': True,
-    'author': 'Odoo S.A.',
+    'application': False,
+    'auto_install': False,
     'license': 'LGPL-3',
 }
