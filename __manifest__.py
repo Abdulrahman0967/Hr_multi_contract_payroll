@@ -9,11 +9,7 @@
         and calculates payroll accordingly.
     """,
     'author': 'Abdulrahman',
-    'depends': [
-        'hr',
-        'hr_contract',
-        'hr_payroll',
-    ],
+    'depends': ['hr', 'hr_contract'],
     'data': [
 
     ],
